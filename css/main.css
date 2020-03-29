@@ -6,6 +6,9 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css);
 
 /*기본 스타일*/
+*, *::before, *::after{
+    box-sizing:  border-box;
+}
 body {
      font-family: 'Spoqa Han Sans', 'Sans-serif'; 
      font-weight: 400;
@@ -33,3 +36,43 @@ body {
     clip: rect(0,0,0,0);
     clip-path: polygon(0 0, 0 0, 0 0);
 }
+
+/* 헤더 */
+
+/* 브랜드 */
+
+
+.brand a{
+    display: block;
+    width: 215px;
+
+}
+
+.brand img{
+    padding: 25px;
+}
+
+/*메인 메뉴 열기 버튼*/
+
+.app-header .button .ir,
+.app-header .button .close {
+  cursor: pointer;
+}
+
+
+.app-header .button.is-open-menu {
+    
+    user-select: none;
+    padding: 20px;
+    background: #ffffff;
+    border: 0;
+  }
+
+.button.is-open-menu .ir{
+    background-color: yellow;
+    display: block;
+    background-image: url(./../images/navigation-button.gif);
+    width: 26px;
+    height: 22px;
+}
+
