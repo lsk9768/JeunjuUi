@@ -83,8 +83,15 @@ body {
   width: 100vw;
   height: 100vh;
   background: hsla(225, 57%, 10%, 0.9);
-  color: #fff;
+  color: #fff; transition: all 0.4s cubic-bezier(0.66, -0.01, 0.3, 0.99);
+  transform: translateX(105vw);
+  backdrop-filter: blur(2px);
 }
+
+.app-navigation.is-active {
+    transform: translateX(0);
+  }
+  
 .app-navigation .button.is-close-menu {
   position: absolute;
   top: 10px;
@@ -96,6 +103,7 @@ body {
   font-size: 20px;
   line-height: 0.5;
   border: 0 none;
+ 
 }
 .app-navigation ul{
   padding-top: 60px;
@@ -124,6 +132,8 @@ body {
   grid-template-rows: auto;
 }
 .ediya-menu__item{
+    position: relative;
+   
 }
 .ediya-menu__item a{
   display: block
@@ -149,6 +159,92 @@ body {
 .ediya-menu__item figcaption{
   margin-bottom: 1em;
 }
+
+
+.ediya-menu__item--detail{
+    background-color: rgba(255,255,255,0.4);
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 1em;
+    opacity: 1;
+    padding: 2em;
+    opacity: 0;
+}
+
+.ediya-menu__item--detail.is-active {
+    opacity: 1;
+  }
+.ediya-menu__item--name{
+    border-bottom: 2px solid #202023;
+    padding-bottom: 1em;
+    font-weight: 400;
+    font-size: 18px;
+    color: #202023;
+
+}
+.ediya-menu__item--name [lang="en"]{
+    display: block;    
+    color: #737373;
+    font-size: 14px;
+}
+.ediya-menu__item--detail p{
+    line-height: 1.6;    
+}
+
+.ediya-menu__item--multi-column{
+
+    position: absolute;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    column-fill: auto;
+    column-rule: 1px solid #999;
+    column-gap: 2em;
+    padding: 1em 2em;
+    background: #f8f8f8;
+}
+.ediya-menu__item--multi-column.is-2{
+    column-count: 2;
+    
+}
+.ediya-menu__item--multi-column dl{
+    margin: 0;
+}
+.ediya-menu__item--multi-column dt{
+
+    float: left;
+    margin-right: 10;
+    width: 40%;
+
+}
+.ediya-menu__item--multi-column dd{
+
+    float : right;
+    margin-left: 0;
+    width: 40%;
+
+}
+
+.ediya-menu__item--detail .button.is-close-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 9px 15px;
+    font-size: 24px;
+    background: transparent;
+    transition: all 0.3s ease;
+    border: 0 none;
+  }
+
+  
+.ediya-menu__item--detail .button.is-close-panel:hover {
+    background: #f3f3f3;
+  }
+  
 @media screen and (min-width: 768px) {
   .ediya-menu{
     max-width: 960px;
