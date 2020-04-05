@@ -88,6 +88,11 @@ body {
   backdrop-filter: blur(2px);
 }
 
+@keyframes transform-none{
+ to{
+   transform: none;
+ }
+}
 .app-navigation.is-active {
     transform: translateX(0);
   }

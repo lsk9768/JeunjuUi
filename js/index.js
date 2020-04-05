@@ -139,5 +139,4 @@ function a11yOffCanvasMenu(app_navigation) {
       }, 10);
     }
   }
-  
 }

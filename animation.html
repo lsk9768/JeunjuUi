@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+<style>
+    @keyframes transform-none{
+        to{
+            opacity: 1;
+            transform: none;
+        }
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:0;
+        min-height: 100vh;
+        background-color: #6238ca;
+        color: #ffffff;
+    }
+    .sequencing{
+        display: flex;
+        flex-flow: column;
+        font-size: 100px;
+        font-weight: 100;
+    }
+    .sequencing.is-animate span{
+        opacity: 0;
+        transform: translateY(4rem);
+        animation:
+        transform-none
+            0.6s
+            cubic-bezier(0.2,0.66,0.54,1.4)
+            infinite
+            alternate
+            forwards;
+    }
+    .sequencing span:nth-child(1){animation-delay: 0.2s}
+    .sequencing span:nth-child(2){animation-delay: 0.4s}
+    .sequencing span:nth-child(3){animation-delay: 0.6s}
+</style>
+<body>
+    <div class="sequencing is-animate">
+        <span>Figma를 활용한</span>
+        <span>모바일 웹 UI</span>
+        <span>제작 실습 Animation</span>
+    </div>
+    
+</body>
+</html>
